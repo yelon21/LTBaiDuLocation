@@ -18,7 +18,6 @@
     BMKGeoCodeSearch* _geocodesearch;
     
     BOOL startSucceed;
-    BOOL networkSucceed;
     BOOL permissionSucceed;
 }
 
@@ -66,7 +65,6 @@
     if (self = [super init]) {
         
         startSucceed = NO;
-        networkSucceed = NO;
         permissionSucceed = NO;
         
         self.detailAddress = @"";
@@ -101,7 +99,7 @@
 //开始定位
 -(void)lt_startLocation{
 
-    if (!startSucceed ||!permissionSucceed || !networkSucceed) {
+    if (!startSucceed ||!permissionSucceed) {
         
         return;
     }
@@ -320,12 +318,10 @@
 - (void)onGetNetworkState:(int)iError{
     
     if (0 == iError) {
-        NSLog(@"联网成功");
-        networkSucceed = YES;
+//        NSLog(@"联网成功");
     }
     else{
-        NSLog(@"onGetNetworkState %d",iError);
-        networkSucceed = NO;
+//        NSLog(@"onGetNetworkState %d",iError);
     }
 }
 
@@ -334,6 +330,7 @@
     if (0 == iError) {
         NSLog(@"授权成功");
         permissionSucceed = YES;
+        [self lt_startLocation];
     }
     else {
         NSLog(@"onGetPermissionState %d",iError);
