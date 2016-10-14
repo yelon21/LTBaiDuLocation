@@ -1,0 +1,19 @@
+PODS:
+  - BaiduMapKit (3.0.0)
+  - LTBaiDuLocation (0.1.0):
+    - BaiduMapKit (~> 3.0.0)
+
+DEPENDENCIES:
+  - LTBaiDuLocation (from `../`)
+
+EXTERNAL SOURCES:
+  LTBaiDuLocation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
+  LTBaiDuLocation: 161e000577910a8ccdb8f3f6e141106b04e1b03d
+
+PODFILE CHECKSUM: 1588ae256c0fb5f3f7b1e4c44a791ae4b053aaf8
+
+COCOAPODS: 1.1.0.rc.2

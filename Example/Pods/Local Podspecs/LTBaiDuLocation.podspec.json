@@ -1,0 +1,27 @@
+{
+  "name": "LTBaiDuLocation",
+  "version": "0.1.0",
+  "summary": "LTBaiDuLocation.",
+  "description": "TODO: LTBaiDuLocation 百度定位",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/LTBaiDuLocation",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yjpal": "yl21ly@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/LTBaiDuLocation.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source_files": "LTBaiDuLocation/Classes/**/*",
+  "dependencies": {
+    "BaiduMapKit": [
+      "~> 3.0.0"
+    ]
+  }
+}
