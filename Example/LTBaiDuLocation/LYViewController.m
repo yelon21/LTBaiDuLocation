@@ -20,6 +20,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    [[LTBaiDuLocation sharedLocation] addObserver:self
+                                       forKeyPath:@"currentLocation"
+                                          options:NSKeyValueObservingOptionNew
+                                          context:nil];
+    
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+
+    if ([keyPath isEqualToString:@"currentLocation"]) {
+        
+        BMKUserLocation *location = change[@"new"];
+        NSLog(@"object=%@",object);
+    }
 }
 
 - (IBAction)startLocation:(id)sender {

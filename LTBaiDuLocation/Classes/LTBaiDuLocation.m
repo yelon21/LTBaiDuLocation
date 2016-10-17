@@ -7,21 +7,18 @@
 //
 
 #import "LTBaiDuLocation.h"
-#import <BaiduMapAPI_Base/BMKBaseComponent.h>
-#import <BaiduMapAPI_Location/BMKLocationComponent.h>
-#import <BaiduMapAPI_Search/BMKSearchComponent.h>
 
-@interface LTBaiDuLocation ()<BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate,BMKGeneralDelegate>{
+@interface LTBaiDuLocation ()<BMKLocationServiceDelegate,BMKGeneralDelegate>{
 
     BMKMapManager* _mapManager;
     BMKLocationService* _locService;
-    BMKGeoCodeSearch* _geocodesearch;
-    
+    LTBaiDuGeoCodeSearch *search;
     BOOL startSucceed;
     BOOL permissionSucceed;
 }
 
-@property(nonatomic,strong) BMKReverseGeoCodeResult *reverseGeoCodeResult;
+@property(nonatomic,strong,readwrite) BMKReverseGeoCodeResult *reverseGeoCodeResult;
+@property(nonatomic,strong,readwrite) BMKUserLocation *currentLocation;
 
 @property(nonatomic,assign,readwrite) NSString *detailAddress;//详细地址
 
@@ -67,16 +64,12 @@
         startSucceed = NO;
         permissionSucceed = NO;
         
-        self.detailAddress = @"";
-        
         _mapManager = [[BMKMapManager alloc]init];
         _locService = [[BMKLocationService alloc]init];
+        search = [[LTBaiDuGeoCodeSearch alloc]init];
         
         _locService.desiredAccuracy = kCLLocationAccuracyBest;
         _locService.distanceFilter = 10.0;
-        
-        _geocodesearch = [[BMKGeoCodeSearch alloc]init];
-        _geocodesearch.delegate = self;
     }
     
     return self;
@@ -111,21 +104,6 @@
    
     _locService.delegate = nil;
     [_locService stopUserLocationService];
-}
-//反向地理编码
--(BOOL)lt_startReverseGeocode:(CLLocationCoordinate2D)pt{
-    
-    BMKReverseGeoCodeOption *reverseGeocodeSearchOption = [[BMKReverseGeoCodeOption alloc]init];
-    reverseGeocodeSearchOption.reverseGeoPoint = pt;
-    BOOL flag = [_geocodesearch reverseGeoCode:reverseGeocodeSearchOption];
-    
-    if(flag){
-        NSLog(@"反geo检索发送成功");
-    }
-    else{
-        NSLog(@"反geo检索发送失败");
-    }
-    return flag;
 }
 
 #pragma mark getter 
@@ -242,34 +220,6 @@
     return NO;
 }
 
-#pragma mark BMKGeoCodeSearchDelegate
-/**
- *返回地址信息搜索结果
- *@param searcher 搜索对象
- *@param result 搜索结BMKGeoCodeSearch果
- *@param error 错误号，@see BMKSearchErrorCode
- */
-- (void)onGetGeoCodeResult:(BMKGeoCodeSearch *)searcher
-                    result:(BMKGeoCodeResult *)result
-                 errorCode:(BMKSearchErrorCode)error{
-    
-}
-/**
- *返回反地理编码搜索结果
- *@param searcher 搜索对象
- *@param result 搜索结果
- *@param error 错误号，@see BMKSearchErrorCode
- */
--(void) onGetReverseGeoCodeResult:(BMKGeoCodeSearch *)searcher
-                           result:(BMKReverseGeoCodeResult *)result
-                        errorCode:(BMKSearchErrorCode)error{
-    
-    if (BMK_SEARCH_NO_ERROR == error) {
-        
-        self.reverseGeoCodeResult = result;
-    }
-}
-
 #pragma mark BMKLocationServiceDelegate
 /**
  *在地图View将要启动定位时，会调用此函数
@@ -297,9 +247,14 @@
 
     NSLog(@"title=%@",userLocation.title);
     NSLog(@"subtitle=%@",userLocation.subtitle);
+
+    self.currentLocation = userLocation;
     
-    [self lt_startReverseGeocode:userLocation.location.coordinate];
-    
+    [search lt_startReverseGeocode:self.currentLocation.location.coordinate
+                       resultBlock:^(BMKReverseGeoCodeResult *result) {
+                           
+                           self.reverseGeoCodeResult = result;
+                       }];
 }
 
 /**

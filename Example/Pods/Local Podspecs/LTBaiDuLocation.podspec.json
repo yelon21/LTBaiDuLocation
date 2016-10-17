@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "LTBaiDuLocation.",
   "description": "TODO: LTBaiDuLocation 百度定位",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/LTBaiDuLocation",
+  "homepage": "https://github.com/yelon21/LTBaiDuLocation",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "yjpal": "yl21ly@qq.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/LTBaiDuLocation.git",
+    "git": "https://github.com/yelon21/LTBaiDuLocation.git",
     "tag": "0.1.0"
   },
   "platforms": {

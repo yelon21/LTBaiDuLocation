@@ -8,12 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, PermissionType) {
-    PermissionTypeFail,
-    PermissionTypeSucceed,
-    PermissionTypeBDSucceed,
-    PermissionTypeSysSucceed
-};
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>
+#import "LTBaiDuGeoCodeSearch.h"
 
 @class BMKReverseGeoCodeResult;
 
@@ -24,6 +21,7 @@ typedef NS_ENUM(NSUInteger, PermissionType) {
 @property(nonatomic,assign,readonly) BOOL permissionBD;
 
 @property(nonatomic,strong,readonly) BMKReverseGeoCodeResult *reverseGeoCodeResult;
+@property(nonatomic,strong,readonly) BMKUserLocation *currentLocation;
 
 @property(nonatomic,assign,readonly) NSString *detailAddress;//详细地址
 
