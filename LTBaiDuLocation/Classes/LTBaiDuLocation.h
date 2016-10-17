@@ -7,12 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+
+typedef NS_ENUM(NSUInteger, PermissionType) {
+    PermissionTypeFail,
+    PermissionTypeSucceed,
+    PermissionTypeBDSucceed,
+    PermissionTypeSysSucceed
+};
+
 @class BMKReverseGeoCodeResult;
 
 @interface LTBaiDuLocation : NSObject
 
 @property(nonatomic,assign,readonly) BOOL located;
 @property(nonatomic,assign,readonly) BOOL locateEnable;
+@property(nonatomic,assign,readonly) BOOL permissionBD;
 
 @property(nonatomic,strong,readonly) BMKReverseGeoCodeResult *reverseGeoCodeResult;
 

@@ -129,6 +129,12 @@
 }
 
 #pragma mark getter 
+
+-(BOOL)permissionBD{
+
+    return permissionSucceed;
+}
+
 -(NSString *)detailAddress{
     
     return [NSString stringWithFormat:@"%@",self.reverseGeoCodeResult.address];
@@ -318,10 +324,10 @@
 - (void)onGetNetworkState:(int)iError{
     
     if (0 == iError) {
-//        NSLog(@"联网成功");
+        NSLog(@"联网成功");
     }
     else{
-//        NSLog(@"onGetNetworkState %d",iError);
+        NSLog(@"onGetNetworkState %d",iError);
     }
 }
 
