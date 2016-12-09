@@ -8,6 +8,8 @@
 
 #import "LTBaiDuLocation.h"
 
+#import "LTLocation.h"
+
 @interface LTBaiDuLocation ()<BMKLocationServiceDelegate,BMKGeneralDelegate>{
 
     BMKMapManager* _mapManager;
@@ -15,6 +17,8 @@
     LTBaiDuGeoCodeSearch *search;
     BOOL startSucceed;
     BOOL permissionSucceed;
+    
+    LTLocation *ltlocation;
 }
 
 @property(nonatomic,strong,readwrite) BMKReverseGeoCodeResult *reverseGeoCodeResult;
@@ -92,18 +96,34 @@
 //开始定位
 -(void)lt_startLocation{
 
-    if (!startSucceed ||!permissionSucceed) {
+    if (startSucceed && permissionSucceed) {
         
-        return;
+        _locService.delegate = self;
+        [_locService startUserLocationService];
     }
-    _locService.delegate = self;
-    [_locService startUserLocationService];
+    else{
+    
+        if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
+            
+            [ltlocation lt_startLocation];
+        }
+    }
 }
 //停止定位
 -(void)lt_stopLocation{
    
-    _locService.delegate = nil;
-    [_locService stopUserLocationService];
+    if (self.permissionBD) {
+        
+        _locService.delegate = nil;
+        [_locService stopUserLocationService];
+    }
+    else{
+        
+        if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
+            
+            [ltlocation lt_stopLocation];
+        }
+    }
 }
 
 #pragma mark getter 
@@ -115,29 +135,70 @@
 
 -(NSString *)detailAddress{
     
-    return [NSString stringWithFormat:@"%@",self.reverseGeoCodeResult.address];
+    if (self.permissionBD) {
+        
+        return [NSString stringWithFormat:@"%@",self.reverseGeoCodeResult.address];
+    }
+    else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
+        
+        return [ltlocation detailAddress];
+    }
+    return @"";
 }
 -(NSString *)briefAddress{
 
-    BMKAddressComponent *component = self.reverseGeoCodeResult.addressDetail;
-    
-    return [NSString stringWithFormat:@"%@|%@|%@|",component.province,component.city,component.district];
+    if (self.permissionBD) {
+        
+        BMKAddressComponent *component = self.reverseGeoCodeResult.addressDetail;
+        
+        return [NSString stringWithFormat:@"%@|%@|%@|",component.province,component.city,component.district];
+    }
+    else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
+        
+        return [ltlocation briefAddress];
+    }
+    return @"";
 }
 -(NSString *)city{
-
-    BMKAddressComponent *component = self.reverseGeoCodeResult.addressDetail;
     
-    return [NSString stringWithFormat:@"%@",component.city];
+    if (self.permissionBD) {
+        
+        BMKAddressComponent *component = self.reverseGeoCodeResult.addressDetail;
+        
+        return [NSString stringWithFormat:@"%@",component.city];
+    }
+    else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
+        
+        return [ltlocation city];
+    }
+    
+    return @"";
 }
 -(NSString *)latitudeBaiDu{
 
-    CLLocationCoordinate2D location = self.reverseGeoCodeResult.location;
-    return [@(location.latitude) description];
+    if (self.permissionBD) {
+        
+        CLLocationCoordinate2D location = self.reverseGeoCodeResult.location;
+        return [@(location.latitude) description];
+    }
+    else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
+        
+        return [ltlocation latitudeBaiDu];
+    }
+    return @"";
 }
 -(NSString *)longitudeBaiDu{
     
-    CLLocationCoordinate2D location = self.reverseGeoCodeResult.location;
-    return [@(location.longitude) description];
+    if (self.permissionBD) {
+        
+        CLLocationCoordinate2D location = self.reverseGeoCodeResult.location;
+        return [@(location.longitude) description];
+    }
+    else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
+        
+        return [ltlocation longitudeBaiDu];
+    }
+    return @"";
 }
 
 -(BOOL)located{
@@ -191,7 +252,7 @@
         self.LocationDisableBlock();
     }
 }
-
+//ios8之后
 - (BOOL)locateEnableIOS8Later{
     
     if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_7_1) {
@@ -206,7 +267,7 @@
     
     return NO;
 }
-
+//ios8之前
 - (BOOL)locateEnableIOS8Before{
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
@@ -291,11 +352,21 @@
     if (0 == iError) {
         NSLog(@"授权成功");
         permissionSucceed = YES;
+        
+        if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
+            
+            [ltlocation lt_stopLocation];
+            ltlocation = nil;
+        }
+        
         [self lt_startLocation];
     }
     else {
         NSLog(@"onGetPermissionState %d",iError);
         permissionSucceed = NO;
+        
+        ltlocation = [LTLocation sharedLocation];
+        [self lt_startLocation];
     }
 }
 

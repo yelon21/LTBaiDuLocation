@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>GTMBase64.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LTBaiDuLocation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LTLocation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3613A6EF7BC8B15A30950FAAF15CB828</key>
+		<key>00958B663EEF5932A0D7301005DB8F57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>73E69DDEA8ECA93733A1AF1D2C5A1DE5</key>
+		<key>0D7C0DE98A60C8875450F3B4D5BD6347</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CEF4D0010FCFD407EE3FA4F1FF2B1B0</key>
+		<key>4B5B9AA1801320466656712C501A5EC6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A0D570714FC29D5F8B8453F22C0906E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E575D03E12464D1724F07410E5506D11</key>
 		<dict>
 			<key>primary</key>
 			<true/>

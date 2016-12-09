@@ -2,6 +2,8 @@
 
 target 'LTBaiDuLocation_Example' do
     
+    pod 'LTLocation', :git => 'git@github.com:yelon21/LTLocation.git'
+    
   pod 'LTBaiDuLocation', :path => '../'
 
   target 'LTBaiDuLocation_Tests' do
