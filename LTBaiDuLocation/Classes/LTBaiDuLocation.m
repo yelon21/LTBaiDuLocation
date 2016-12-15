@@ -207,6 +207,7 @@
         
         if ([self.latitudeBaiDu doubleValue] == 0.0 || [self.longitudeBaiDu doubleValue] == 0.0) {
             
+            [self lt_startLocation];
             return NO;
         }
         else{
