@@ -1,6 +1,6 @@
 {
   "name": "LTBaiDuLocation",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "summary": "LTBaiDuLocation.",
   "description": "TODO: LTBaiDuLocation 百度定位",
   "homepage": "https://github.com/yelon21/LTBaiDuLocation",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/yelon21/LTBaiDuLocation.git",
-    "tag": "0.1.0"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "6.0"
