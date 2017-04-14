@@ -2,13 +2,13 @@
 
 target 'LTBaiDuLocation_Example' do
     
-    #    pod 'LTLocation', :git => 'git@github.com:yelon21/LTLocation.git'
+        pod 'LTLocation', :git => 'git@github.com:yelon21/LTLocation.git'
     
-#  pod 'LTBaiDuLocation', :path => '../'
+  pod 'LTBaiDuLocation', :path => '../'
 
-#  target 'LTBaiDuLocation_Tests' do
-#    inherit! :search_paths
+  target 'LTBaiDuLocation_Tests' do
+    inherit! :search_paths
 
     
-#  end
+  end
 end

@@ -85,7 +85,7 @@
         
         if (BMK_SEARCH_NO_ERROR == error) {
             
-            self.reverseGeoCodeSearchBlock(result);
+            self.geoCodeSearchBlock(result);
         }
     }
 }

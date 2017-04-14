@@ -4,7 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>GTMBase64.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LTBaiDuLocation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LTLocation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LTBaiDuLocation_Example.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LTBaiDuLocation_Tests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -12,7 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D0A02450A29E7B709BB6A3473F77B164</key>
+		<key>00958B663EEF5932A0D7301005DB8F57</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0D7C0DE98A60C8875450F3B4D5BD6347</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4B5B9AA1801320466656712C501A5EC6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A0D570714FC29D5F8B8453F22C0906E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E575D03E12464D1724F07410E5506D11</key>
 		<dict>
 			<key>primary</key>
 			<true/>
