@@ -284,8 +284,7 @@
 
 #pragma mark BMKLocationServiceDelegate
 /**
- *在地图View将要启动定位时，会调用此函数
- *@param mapView 地图View
+ *在将要启动定位时，会调用此函数
  */
 - (void)willStartLocatingUser{
     
@@ -320,8 +319,7 @@
 }
 
 /**
- *在地图View停止定位后，会调用此函数
- *@param mapView 地图View
+ *在停止定位后，会调用此函数
  */
 - (void)didStopLocatingUser{
     
@@ -330,8 +328,7 @@
 
 /**
  *定位失败后，会调用此函数
- *@param mapView 地图View
- *@param error 错误号，参考CLError.h中定义的错误号
+ *@param error 错误号
  */
 - (void)didFailToLocateUserWithError:(NSError *)error{
    
