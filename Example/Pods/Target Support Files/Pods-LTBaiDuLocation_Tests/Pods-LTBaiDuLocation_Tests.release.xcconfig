@@ -1,9 +1,7 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/BaiduMapKit/BaiduMapKit"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BaiduMapKit" "${PODS_ROOT}/Headers/Public/GTMBase64" "${PODS_ROOT}/Headers/Public/LTBaiDuLocation" "${PODS_ROOT}/Headers/Public/LTLocation"
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/GTMBase64" "${PODS_CONFIGURATION_BUILD_DIR}/LTBaiDuLocation" "${PODS_CONFIGURATION_BUILD_DIR}/LTLocation" "${PODS_ROOT}/BaiduMapKit/BaiduMapKit/thirdlibs"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BaiduMapKit" -isystem "${PODS_ROOT}/Headers/Public/GTMBase64" -isystem "${PODS_ROOT}/Headers/Public/LTBaiDuLocation" -isystem "${PODS_ROOT}/Headers/Public/LTLocation"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"sqlite3.0" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "OpenGLES" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public"
+OTHER_LDFLAGS = $(inherited) -ObjC
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

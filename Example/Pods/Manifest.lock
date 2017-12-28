@@ -1,32 +1,3 @@
-PODS:
-  - BaiduMapKit (3.4.2)
-  - GTMBase64 (1.0.0)
-  - LTBaiDuLocation (0.1.3):
-    - BaiduMapKit (~> 3.4.2)
-  - LTLocation (0.1.1):
-    - GTMBase64 (~> 1.0.0)
-
-DEPENDENCIES:
-  - LTBaiDuLocation (from `../`)
-  - LTLocation (from `git@github.com:yelon21/LTLocation.git`)
-
-EXTERNAL SOURCES:
-  LTBaiDuLocation:
-    :path: ../
-  LTLocation:
-    :git: git@github.com:yelon21/LTLocation.git
-
-CHECKOUT OPTIONS:
-  LTLocation:
-    :commit: aa0aabddab66b052c9aa79e180d2bf53e71f3508
-    :git: git@github.com:yelon21/LTLocation.git
-
-SPEC CHECKSUMS:
-  BaiduMapKit: f61b19ecf07a3f2deede72b221b366bf698739ed
-  GTMBase64: 0da7372e95f5171f3f652db38cde6716f8eb5e24
-  LTBaiDuLocation: 8f06ea254f3d18a5627a039884c593411b0a3754
-  LTLocation: e38c1c924bc3d0935127805e86eb33337bba9cf9
-
-PODFILE CHECKSUM: 56951295fe81c2283c68acc1036c57bbb33c6e01
+PODFILE CHECKSUM: 0ba5c401c9997400b7fdc46cf5a40530401c22b4
 
 COCOAPODS: 1.4.0.rc.1
