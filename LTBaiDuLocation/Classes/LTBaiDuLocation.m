@@ -87,10 +87,14 @@
         return NO;
     }
     
-    startSucceed = [_mapManager start:key generalDelegate:self];
-    if (!startSucceed) {
-        NSLog(@"百度定位引擎启动失败：%@",key);
+    if(!startSucceed || !permissionSucceed){
+    
+        startSucceed = [_mapManager start:key generalDelegate:self];
+        if (!startSucceed) {
+            NSLog(@"百度定位引擎启动失败：%@",key);
+        }
     }
+    
     return startSucceed;
 }
 
