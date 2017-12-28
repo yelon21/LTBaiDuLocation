@@ -83,12 +83,13 @@
 
     if (!key || ![key isKindOfClass:[NSString class]]||[key length]==0) {
         
+        NSLog(@"百度定位Key异常：%@",key);
         return NO;
     }
     
     startSucceed = [_mapManager start:key generalDelegate:self];
     if (!startSucceed) {
-        NSLog(@"manager start failed!");
+        NSLog(@"百度定位引擎启动失败：%@",key);
     }
     return startSucceed;
 }
@@ -338,17 +339,17 @@
 - (void)onGetNetworkState:(int)iError{
     
     if (0 == iError) {
-        NSLog(@"联网成功");
+        NSLog(@"BDMap联网成功");
     }
     else{
-        NSLog(@"onGetNetworkState %d",iError);
+        NSLog(@"BDMap联网失败-onGetNetworkState:%d",iError);
     }
 }
 
 - (void)onGetPermissionState:(int)iError{
    
     if (0 == iError) {
-        NSLog(@"授权成功");
+        NSLog(@"BDMap授权成功");
         permissionSucceed = YES;
         
         if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
@@ -360,7 +361,7 @@
         [self lt_startLocation];
     }
     else {
-        NSLog(@"onGetPermissionState %d",iError);
+        NSLog(@"BDMapon授权失败:%d",iError);
         permissionSucceed = NO;
         
         ltlocation = [LTLocation sharedLocation];

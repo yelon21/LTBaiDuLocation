@@ -21,10 +21,7 @@
   "source_files": "LTBaiDuLocation/Classes/**/*",
   "dependencies": {
     "BaiduMapKit": [
-      "~> 3.1.0"
-    ],
-    "LTLocation": [
-      "~> 0.1.1"
+      "~> 3.4.2"
     ]
   }
 }
