@@ -39,6 +39,6 @@ TODO: LTBaiDuLocation 百度定位
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
- s.dependency 'BaiduMapKit', '~> 3.4.2'
+ s.dependency 'BaiduMapKit', '~> 3.1.0'
 #s.dependency 'LTLocation', '~> 0.1.1'
 end
