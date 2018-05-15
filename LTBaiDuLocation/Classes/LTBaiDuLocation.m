@@ -162,7 +162,7 @@
         
         return [ltlocation briefAddress];
     }
-    return @"";
+    return @"|||";
 }
 -(NSString *)city{
     
