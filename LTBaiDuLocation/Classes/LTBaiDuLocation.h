@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-//#import <BaiduMapAPI_Base/BMKBaseComponent.h>
-//#import <BaiduMapAPI_Location/BMKLocationComponent.h>
-#import <BMKLocationkit/BMKLocationComponent.h>
+#import <BMKLocationKit/BMKLocationComponent.h>
 
 @class BMKReverseGeoCodeResult;
 
@@ -31,7 +29,7 @@
 @property(nonatomic,assign,readonly) NSString *briefAddress;//省|市|区|postalCode
 @property(nonatomic,assign,readonly) NSString *city;
 
-@property(nonatomic,strong) void(^LocationDisableBlock)();
+@property(nonatomic,strong) void(^LocationDisableBlock)(void);
 
 + (id)sharedLocation;
 
