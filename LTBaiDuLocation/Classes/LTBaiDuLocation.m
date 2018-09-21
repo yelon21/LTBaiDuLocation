@@ -10,19 +10,18 @@
 
 #import "LTLocation.h"
 
-@interface LTBaiDuLocation ()<BMKLocationServiceDelegate,BMKGeneralDelegate>{
+@interface LTBaiDuLocation ()<BMKLocationAuthDelegate,BMKLocationManagerDelegate>{
 
-    BMKMapManager* _mapManager;
-    BMKLocationService* _locService;
-    LTBaiDuGeoCodeSearch *search;
-    BOOL startSucceed;
+    BMKLocationManager* _locationManager;
+    
     BOOL permissionSucceed;
     
     LTLocation *ltlocation;
 }
 
-@property(nonatomic,strong,readwrite) BMKReverseGeoCodeResult *reverseGeoCodeResult;
-@property(nonatomic,strong,readwrite) BMKUserLocation *currentLocation;
+@property(nonatomic,strong) BMKLocationManager *locationManager;
+
+@property(nonatomic,strong,readwrite) BMKLocation *currentLocation;
 
 @property(nonatomic,assign,readwrite) NSString *detailAddress;//详细地址
 
@@ -30,6 +29,7 @@
 
 
 @implementation LTBaiDuLocation
+@synthesize locationManager = _locationManager;
 
 + (id)sharedLocation{
     
@@ -65,46 +65,56 @@
     
     if (self = [super init]) {
         
-        startSucceed = NO;
         permissionSucceed = NO;
         
-        _mapManager = [[BMKMapManager alloc]init];
-        _locService = [[BMKLocationService alloc]init];
-        search = [[LTBaiDuGeoCodeSearch alloc]init];
-        
-        _locService.desiredAccuracy = kCLLocationAccuracyBest;
-        _locService.distanceFilter = 10.0;
+        //初始化实例
+        _locationManager = [[BMKLocationManager alloc] init];
+        //设置delegate
+        _locationManager.delegate = self;
+        //设置返回位置的坐标系类型
+        _locationManager.coordinateType = BMKLocationCoordinateTypeBMK09LL;
+        //设置距离过滤参数
+        _locationManager.distanceFilter = kCLDistanceFilterNone;
+        //设置预期精度参数
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        //设置应用位置类型
+        _locationManager.activityType = CLActivityTypeOther;
+        //设置是否自动停止位置更新
+        _locationManager.pausesLocationUpdatesAutomatically = NO;
+        //设置是否允许后台定位
+        //_locationManager.allowsBackgroundLocationUpdates = YES;
+        //设置位置获取超时时间
+        _locationManager.locationTimeout = 10;
+        //设置获取地址信息超时时间
+        _locationManager.reGeocodeTimeout = 10;
     }
     
     return self;
 }
 
-- (BOOL)lt_startWithBaiDuKey:(NSString *)key{
+- (void)lt_startWithBaiDuKey:(NSString *)key{
 
     if (!key || ![key isKindOfClass:[NSString class]]||[key length]==0) {
         
         NSLog(@"百度定位Key异常：%@",key);
-        return NO;
+        return;
     }
     
-    if(!startSucceed || !permissionSucceed){
+    if(!permissionSucceed){
     
-        startSucceed = [_mapManager start:key generalDelegate:self];
-        if (!startSucceed) {
-            NSLog(@"百度定位引擎启动失败：%@",key);
-        }
+        [[BMKLocationAuth sharedInstance] checkPermisionWithKey:key
+                                                   authDelegate:self];
     }
-    
-    return startSucceed;
 }
 
 //开始定位
 -(void)lt_startLocation{
 
-    if (startSucceed && permissionSucceed) {
+    if (permissionSucceed) {
         
-        _locService.delegate = self;
-        [_locService startUserLocationService];
+//        _locService.delegate = self;
+        [self.locationManager setLocatingWithReGeocode:YES];
+        [self.locationManager startUpdatingLocation];
     }
     else{
     
@@ -119,8 +129,8 @@
    
     if (self.permissionBD) {
         
-        _locService.delegate = nil;
-        [_locService stopUserLocationService];
+        
+        [self.locationManager stopUpdatingLocation];
     }
     else{
         
@@ -142,7 +152,8 @@
     
     if (self.permissionBD) {
         
-        return [NSString stringWithFormat:@"%@",self.reverseGeoCodeResult.address];
+        BMKLocationReGeocode * rgcData = self.currentLocation.rgcData;
+        return [NSString stringWithFormat:@"%@%@%@%@%@(%@)",rgcData.province,rgcData.city,rgcData.district,rgcData.street,rgcData.streetNumber,rgcData.locationDescribe];
     }
     else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
         
@@ -154,9 +165,9 @@
 
     if (self.permissionBD) {
         
-        BMKAddressComponent *component = self.reverseGeoCodeResult.addressDetail;
+        BMKLocationReGeocode * rgcData = self.currentLocation.rgcData;
         
-        return [NSString stringWithFormat:@"%@|%@|%@|",component.province,component.city,component.district];
+        return [NSString stringWithFormat:@"%@|%@|%@|",rgcData.province,rgcData.city,rgcData.district];
     }
     else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
         
@@ -168,9 +179,9 @@
     
     if (self.permissionBD) {
         
-        BMKAddressComponent *component = self.reverseGeoCodeResult.addressDetail;
+        BMKLocationReGeocode * rgcData = self.currentLocation.rgcData;
         
-        return [NSString stringWithFormat:@"%@",component.city];
+        return [NSString stringWithFormat:@"%@",rgcData.city];
     }
     else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
         
@@ -183,7 +194,7 @@
 
     if (self.permissionBD) {
         
-        CLLocationCoordinate2D location = self.reverseGeoCodeResult.location;
+        CLLocationCoordinate2D location = self.currentLocation.location.coordinate;
         return [@(location.latitude) description];
     }
     else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
@@ -196,7 +207,7 @@
     
     if (self.permissionBD) {
         
-        CLLocationCoordinate2D location = self.reverseGeoCodeResult.location;
+        CLLocationCoordinate2D location = self.currentLocation.location.coordinate;
         return [@(location.longitude) description];
     }
     else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
@@ -287,72 +298,117 @@
     return NO;
 }
 
-#pragma mark BMKLocationServiceDelegate
+#pragma mark BMKLocationManagerDelegate
 /**
- *在将要启动定位时，会调用此函数
+ *  @brief 当定位发生错误时，会调用代理的此方法。
+ *  @param manager 定位 BMKLocationManager 类。
+ *  @param error 返回的错误，参考 CLError 。
  */
-- (void)willStartLocatingUser{
+- (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager
+          didFailWithError:(NSError * _Nullable)error{
     
-    NSLog(@"start locate");
+    NSLog(@"定位失败:%@",error);
 }
 
 /**
- *用户方向更新后，会调用此函数
- *@param userLocation 新的用户位置
+ *  @brief 连续定位回调函数。
+ *  @param manager 定位 BMKLocationManager 类。
+ *  @param location 定位结果，参考BMKLocation。
+ *  @param error 错误信息。
  */
-- (void)didUpdateUserHeading:(BMKUserLocation *)userLocation{
+- (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager
+         didUpdateLocation:(BMKLocation * _Nullable)location
+                   orError:(NSError * _Nullable)error{
     
-//    NSLog(@"heading is %@",userLocation.heading);
+        self.currentLocation = location;
 }
+
+/**
+ *  @brief 定位权限状态改变时回调函数
+ *  @param manager 定位 BMKLocationManager 类。
+ *  @param status 定位权限状态。
+ */
+- (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
+    
+    NSLog(@"定位权限状态改变:%@",@(status));
+}
+
+/**
+ * @brief 该方法为BMKLocationManager提示需要设备校正回调方法。
+ * @param manager 提供该定位结果的BMKLocationManager类的实例。
+ */
+- (BOOL)BMKLocationManagerShouldDisplayHeadingCalibration:(BMKLocationManager * _Nonnull)manager{
+    
+    NSLog(@"定位-提示需要设备校正");
+    return YES;
+}
+
+/**
+ * @brief 该方法为BMKLocationManager提供设备朝向的回调方法。
+ * @param manager 提供该定位结果的BMKLocationManager类的实例
+ * @param heading 设备的朝向结果
+ */
+- (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager
+          didUpdateHeading:(CLHeading * _Nullable)heading{
+    
+    NSLog(@"定位-设备朝向:%@",heading);
+}
+
+/**
+ * @brief 该方法为BMKLocationManager所在App系统网络状态改变的回调事件。
+ * @param manager 提供该定位结果的BMKLocationManager类的实例
+ * @param state 当前网络状态
+ * @param error 错误信息
+ */
+- (void)BMKLocationManager:(BMKLocationManager * _Nonnull)manager
+     didUpdateNetworkState:(BMKLocationNetworkState)state
+                   orError:(NSError * _Nullable)error{
+    
+    NSLog(@"定位-系统网络状态改变:%@",@(state));
+}
+
 
 /**
  *用户位置更新后，会调用此函数
  *@param userLocation 新的用户位置
  */
-- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation{
+//- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation{
+//
+//    NSLog(@"title=%@",userLocation.title);
+//    NSLog(@"subtitle=%@",userLocation.subtitle);
+//
+//    self.currentLocation = userLocation;
+//
+//    [search lt_startReverseGeocode:self.currentLocation.location.coordinate
+//                       resultBlock:^(BMKReverseGeoCodeResult *result) {
+//
+//                           self.reverseGeoCodeResult = result;
+//                       }];
+//}
 
-    NSLog(@"title=%@",userLocation.title);
-    NSLog(@"subtitle=%@",userLocation.subtitle);
-
-    self.currentLocation = userLocation;
-    
-    [search lt_startReverseGeocode:self.currentLocation.location.coordinate
-                       resultBlock:^(BMKReverseGeoCodeResult *result) {
-                           
-                           self.reverseGeoCodeResult = result;
-                       }];
-}
-
+#pragma mark BMKLocationAuthDelegate
 /**
- *在停止定位后，会调用此函数
+ *@brief 返回授权验证错误
+ *@param iError 错误号 : 为0时验证通过，具体参加BMKLocationAuthErrorCode
  */
-- (void)didStopLocatingUser{
+- (void)onCheckPermissionState:(BMKLocationAuthErrorCode)iError{
     
-    NSLog(@"stop locate");
-}
-
-/**
- *定位失败后，会调用此函数
- *@param error 错误号
- */
-- (void)didFailToLocateUserWithError:(NSError *)error{
-   
-    NSLog(@"location error");
-}
-#pragma mark BMKGeneralDelegate
-- (void)onGetNetworkState:(int)iError{
+    switch (iError) {
+        case BMKLocationAuthErrorSuccess:
+            NSLog(@"BDMap启动正常");
+            break;
+        case BMKLocationAuthErrorNetworkFailed:
+            NSLog(@"BDMap联网失败");
+            break;
+        case BMKLocationAuthErrorFailed:
+            NSLog(@"BDMap-key非法");
+            break;
+        default:
+            NSLog(@"BDMap-未知错误");
+            break;
+    }
     
-    if (0 == iError) {
-        NSLog(@"BDMap联网成功");
-    }
-    else{
-        NSLog(@"BDMap联网失败-onGetNetworkState:%d",iError);
-    }
-}
-
-- (void)onGetPermissionState:(int)iError{
-   
-    if (0 == iError) {
+    if (iError == BMKLocationAuthErrorSuccess) {
         NSLog(@"BDMap授权成功");
         permissionSucceed = YES;
         
@@ -365,7 +421,7 @@
         [self lt_startLocation];
     }
     else {
-        NSLog(@"BDMapon授权失败:%d",iError);
+//        NSLog(@"BDMap 授权失败:%d",iError);
         permissionSucceed = NO;
         
         ltlocation = [LTLocation sharedLocation];

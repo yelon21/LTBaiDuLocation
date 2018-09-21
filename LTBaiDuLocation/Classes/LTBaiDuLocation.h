@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import <BaiduMapAPI_Base/BMKBaseComponent.h>
-#import <BaiduMapAPI_Location/BMKLocationComponent.h>
-#import "LTBaiDuGeoCodeSearch.h"
+//#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+//#import <BaiduMapAPI_Location/BMKLocationComponent.h>
+#import <BMKLocationkit/BMKLocationComponent.h>
 
 @class BMKReverseGeoCodeResult;
 
@@ -21,7 +21,7 @@
 @property(nonatomic,assign,readonly) BOOL permissionBD;
 
 @property(nonatomic,strong,readonly) BMKReverseGeoCodeResult *reverseGeoCodeResult;
-@property(nonatomic,strong,readonly) BMKUserLocation *currentLocation;
+@property(nonatomic,strong,readonly) BMKLocation *currentLocation;
 
 @property(nonatomic,assign,readonly) NSString *detailAddress;//详细地址
 
@@ -35,7 +35,7 @@
 
 + (id)sharedLocation;
 
-- (BOOL)lt_startWithBaiDuKey:(NSString *)key;
+- (void)lt_startWithBaiDuKey:(NSString *)key;
 //开始定位
 -(void)lt_startLocation;
 //停止定位

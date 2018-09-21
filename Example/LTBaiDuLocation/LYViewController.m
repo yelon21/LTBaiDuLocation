@@ -31,8 +31,8 @@
 
     if ([keyPath isEqualToString:@"currentLocation"]) {
         
-        BMKUserLocation *location = change[@"new"];
-        NSLog(@"object=%@",object);
+        BMKLocation *location = change[@"new"];
+        NSLog(@"object=%@",[object debugDescription]);
     }
 }
 

@@ -22,7 +22,6 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		E1CDE9F91DBC4C0C1A47F506 /* libPods-LTBaiDuLocation_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC4AC1852EFAFAA58FA364F /* libPods-LTBaiDuLocation_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +59,7 @@
 		88B56B8F5B3204F837FAD9FC /* LTBaiDuLocation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LTBaiDuLocation.podspec; path = ../LTBaiDuLocation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8DD3CF2DC8CD628AE30D8D6B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9279C94C1F99951B08652007 /* Pods-LTBaiDuLocation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTBaiDuLocation_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTBaiDuLocation_Example/Pods-LTBaiDuLocation_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C7AB203BC49C5E2364C9CD8A /* Pods-LTBaiDuLocation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTBaiDuLocation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTBaiDuLocation_Tests/Pods-LTBaiDuLocation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C933AEB2089E521817471952 /* libPods-LTBaiDuLocation_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LTBaiDuLocation_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D389C4A756DB9D05327917F9 /* Pods-LTBaiDuLocation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTBaiDuLocation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTBaiDuLocation_Tests/Pods-LTBaiDuLocation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DF982284CB93457D499DD061 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FF24F1E2377F8733F6726009 /* Pods-LTBaiDuLocation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTBaiDuLocation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTBaiDuLocation_Example/Pods-LTBaiDuLocation_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +83,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				E1CDE9F91DBC4C0C1A47F506 /* libPods-LTBaiDuLocation_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,8 +183,6 @@
 			children = (
 				9279C94C1F99951B08652007 /* Pods-LTBaiDuLocation_Example.debug.xcconfig */,
 				FF24F1E2377F8733F6726009 /* Pods-LTBaiDuLocation_Example.release.xcconfig */,
-				C7AB203BC49C5E2364C9CD8A /* Pods-LTBaiDuLocation_Tests.debug.xcconfig */,
-				D389C4A756DB9D05327917F9 /* Pods-LTBaiDuLocation_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -204,8 +198,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				4560B480AC5333391272DA1A /* [CP] Embed Pods Frameworks */,
-				15A145738D3319827695781D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,12 +212,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "LTBaiDuLocation_Tests" */;
 			buildPhases = (
-				F2890A00481732FC56726FBE /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				D4CF10759A3FBF3E9DDF15E0 /* [CP] Embed Pods Frameworks */,
-				A7E3804C7898E7A98C7255B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,39 +286,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15A145738D3319827695781D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LTBaiDuLocation_Example/Pods-LTBaiDuLocation_Example-resources.sh",
-				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LTBaiDuLocation_Example/Pods-LTBaiDuLocation_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4560B480AC5333391272DA1A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LTBaiDuLocation_Example/Pods-LTBaiDuLocation_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		87C080DA356B84CA7DB452B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,54 +298,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-LTBaiDuLocation_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A7E3804C7898E7A98C7255B3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LTBaiDuLocation_Tests/Pods-LTBaiDuLocation_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D4CF10759A3FBF3E9DDF15E0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LTBaiDuLocation_Tests/Pods-LTBaiDuLocation_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2890A00481732FC56726FBE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LTBaiDuLocation_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -540,6 +448,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LTBaiDuLocation/LTBaiDuLocation-Prefix.pch";
 				INFOPLIST_FILE = "LTBaiDuLocation/LTBaiDuLocation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yjpal.yjqb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -559,6 +468,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LTBaiDuLocation/LTBaiDuLocation-Prefix.pch";
 				INFOPLIST_FILE = "LTBaiDuLocation/LTBaiDuLocation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yjpal.yjqb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -570,7 +480,6 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7AB203BC49C5E2364C9CD8A /* Pods-LTBaiDuLocation_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -594,7 +503,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D389C4A756DB9D05327917F9 /* Pods-LTBaiDuLocation_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

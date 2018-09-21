@@ -28,7 +28,7 @@ TODO: LTBaiDuLocation 百度定位
   s.source           = { :git => 'https://github.com/yelon21/LTBaiDuLocation.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'LTBaiDuLocation/Classes/**/*'
   
@@ -39,6 +39,6 @@ TODO: LTBaiDuLocation 百度定位
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'BaiduMapKit', '~> 3.1.0'
+  s.dependency 'BMKLocationKit'
 #s.dependency 'LTLocation', '~> 0.1.1'
 end
