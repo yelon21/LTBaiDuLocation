@@ -7,7 +7,7 @@
 //
 
 #import "LTBaiDuLocation.h"
-
+#import <BMKLocationKit/BMKLocationComponent.h>
 #import "LTLocation.h"
 
 @interface LTBaiDuLocation ()<BMKLocationAuthDelegate,BMKLocationManagerDelegate>{

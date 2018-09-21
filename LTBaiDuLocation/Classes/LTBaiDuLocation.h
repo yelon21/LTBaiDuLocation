@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <BMKLocationKit/BMKLocationComponent.h>
+@class BMKLocation;
 
 @interface LTBaiDuLocation : NSObject
 
