@@ -10,15 +10,12 @@
 
 #import <BMKLocationKit/BMKLocationComponent.h>
 
-@class BMKReverseGeoCodeResult;
-
 @interface LTBaiDuLocation : NSObject
 
 @property(nonatomic,assign,readonly) BOOL located;
 @property(nonatomic,assign,readonly) BOOL locateEnable;
 @property(nonatomic,assign,readonly) BOOL permissionBD;
 
-@property(nonatomic,strong,readonly) BMKReverseGeoCodeResult *reverseGeoCodeResult;
 @property(nonatomic,strong,readonly) BMKLocation *currentLocation;
 
 @property(nonatomic,assign,readonly) NSString *detailAddress;//详细地址

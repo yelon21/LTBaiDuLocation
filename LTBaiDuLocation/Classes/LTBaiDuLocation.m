@@ -367,25 +367,6 @@
     NSLog(@"定位-系统网络状态改变:%@",@(state));
 }
 
-
-/**
- *用户位置更新后，会调用此函数
- *@param userLocation 新的用户位置
- */
-//- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation{
-//
-//    NSLog(@"title=%@",userLocation.title);
-//    NSLog(@"subtitle=%@",userLocation.subtitle);
-//
-//    self.currentLocation = userLocation;
-//
-//    [search lt_startReverseGeocode:self.currentLocation.location.coordinate
-//                       resultBlock:^(BMKReverseGeoCodeResult *result) {
-//
-//                           self.reverseGeoCodeResult = result;
-//                       }];
-//}
-
 #pragma mark BMKLocationAuthDelegate
 /**
  *@brief 返回授权验证错误
