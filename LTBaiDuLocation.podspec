@@ -40,5 +40,5 @@ TODO: LTBaiDuLocation 百度定位
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'BMKLocationKit'
-#s.dependency 'LTLocation', '~> 0.1.1'
+  s.dependency 'LTLocation'
 end
