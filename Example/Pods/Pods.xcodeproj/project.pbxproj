@@ -7,21 +7,164 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41F7FD46368021FD2A1F4792BA66F019 /* Pods-LTBaiDuLocation_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9099D8D1A282C494F6602A88D323E344 /* Pods-LTBaiDuLocation_Example-dummy.m */; };
+		02286A75C91CBAA58CEFEF483475A5E8 /* LTLocation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C966C540B7CA8607B1165CC340948FC /* LTLocation-dummy.m */; };
+		0B7680EC558BD5955EF8388D61F53D99 /* BMKLocationReGeocode.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A40B77655D01D93F30FF65CB677D73E /* BMKLocationReGeocode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0F9276244BDD520DC10B4FEBE4B4FFA6 /* BMKGeoFenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A734F863841D4616F375BC74534E6A52 /* BMKGeoFenceManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		12DA2CE20994326F251D2D640EC6823C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3130ECC3B056B20D83534C1DDBBCFD6 /* CoreLocation.framework */; };
+		1926E23F6B050D83884E682AC8215CEF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3130ECC3B056B20D83534C1DDBBCFD6 /* CoreLocation.framework */; };
+		39C21F9C0C8CD28A099DD4403CFA3E75 /* LTBaiDuLocation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D471347513CC850F284CDAE52D46F65A /* LTBaiDuLocation-dummy.m */; };
+		3C6AFD155A247D12A51C05A116568998 /* BMKGeoFenceRegion.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E63B47EB289FE5569C02B8E3E6411DB /* BMKGeoFenceRegion.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		496EC1B5EE69FF87D81C0923CB894C1D /* BMKLocationKitVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = DEED227D65273AF64865955B80493B8F /* BMKLocationKitVersion.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		549FE0E7D368F2B46B793F568745D538 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5778D8E2E746206901F185E5163E3029 /* CoreTelephony.framework */; };
+		54BBB101EFB0FE7B66909015B7C20279 /* LTLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A5E59AA921A3F00F01A5F87EA557F9 /* LTLocation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5CA775BF829FA508DA55ECB1F06B8494 /* BMKLocationPoi.h in Headers */ = {isa = PBXBuildFile; fileRef = 45F74D2E06991BD7E70C590EFD92C0FE /* BMKLocationPoi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7AF0C17347EB109884C9BF4E823276E4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884DA54AE45F81DC427EF9CECF0A336A /* SystemConfiguration.framework */; };
+		84F6E352BC713C0A4D67B778A5B1EA44 /* BMKLocationAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 060672805CB017CA758BEAD7E7D320DC /* BMKLocationAuth.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		886F95B2996CC4CCB3E19A952D77F5F6 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 02996DAE34B78CA992D943BC92D82810 /* GTMDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8EC8D560E612736ED396900E52DDC83E /* BMKLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 184D5174BB48E75F0D5EB2211450CAE3 /* BMKLocationManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9176635BA2E77AF22A37DF21B8A17AF4 /* LTBaiDuLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5565ACFA61A35DAC11CA7392250113D7 /* LTBaiDuLocation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9A0AB0285A744210EF8DD12C02358137 /* BMKLocationComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 86E1017805A7A4BC3C09AE0D5D220370 /* BMKLocationComponent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AD1A7E14D7ABAC8A1206BE1FF6BA750A /* Pods-LTBaiDuLocation_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3540AB14A8377D05F798E6CA48C7D /* Pods-LTBaiDuLocation_Example-dummy.m */; };
+		B725C8611F1E03243809B43E8CA26250 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BB47F14123512CB58B59894E1335FB /* Foundation.framework */; };
+		C22F4DC69186101DEE681D7719A58CEB /* readme.txt in Sources */ = {isa = PBXBuildFile; fileRef = 0A53BA1D47D321B10C8C99DE812209FE /* readme.txt */; };
+		C2D2BD173A1DB057B151F05C90B941E3 /* LTBaiDuLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0095B844747656DC956BABF5FE678337 /* LTBaiDuLocation.m */; };
+		CDD12CF9E59039FE735907E70C606776 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0EE6B6EEE7DCE95A75C07AD08D6E2B /* Security.framework */; };
+		CF9EA2485A9430D0AA08CD5FA8305E62 /* BMKLocationKit in Sources */ = {isa = PBXBuildFile; fileRef = 933B30185B925ACD71859E201376709A /* BMKLocationKit */; };
+		D0B0BB888621F2EA9C4D1D928AA30580 /* GTMBase64-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B8CCA51CF507CF3629B83B6005144F /* GTMBase64-dummy.m */; };
+		D488B9B0838F9E93CB5B3C6687D07BF9 /* LTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD35AB63F11FBAEFF451ABD33F5A0A9 /* LTLocation.m */; };
+		D93F88B177B86D13FF5BA0C32F813B90 /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 88C016D5EB0D098E767AD7ADE1AE1F5F /* GTMBase64.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DFF0E766A292BE0C5726EA61C93085A4 /* BMKLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ECFFD4A29C169E77BDDFB759A23EEA7 /* BMKLocation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E119FFDB34702431847483E4FBBB9325 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73B4FECA1B74DC9FC5B8FC181EEA279 /* UIKit.framework */; };
+		FC7EB161E718538B413C7E1ED26ED798 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = D613D544AB815639F490748CF769E035 /* GTMBase64.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		01877DCEF0DD3A3614CCAB57D354E9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7F8FCEA1F08999DB3B19C1C7B718C65;
+			remoteInfo = GTMBase64;
+		};
+		59503D722EF38076F72F3CB18CC93467 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7F8FCEA1F08999DB3B19C1C7B718C65;
+			remoteInfo = GTMBase64;
+		};
+		61FD4714DE33074EBB94A3BB48E1F7B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A2366BD89270C542F14637823D15AB2;
+			remoteInfo = LTBaiDuLocation;
+		};
+		6E701D82F71C39BBA02998222A30410F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A6AAF94BCE733C1FFE246F972340CF5;
+			remoteInfo = LTLocation;
+		};
+		7E77FF03D0C27FCC5A3E687FA246D45E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7F8FCEA1F08999DB3B19C1C7B718C65;
+			remoteInfo = GTMBase64;
+		};
+		CEAF96266FA2E06D6E11820459A30CE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A6AAF94BCE733C1FFE246F972340CF5;
+			remoteInfo = LTLocation;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		08A32DEBC5038656F295181FADAFFBAB /* Pods-LTBaiDuLocation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTBaiDuLocation_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2CDD2925A5007BFF584E3F1B84524322 /* Pods-LTBaiDuLocation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTBaiDuLocation_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7B5A5C7028A4CE7D65B3F99644EC1412 /* libPods-LTBaiDuLocation_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTBaiDuLocation_Example.a"; path = "libPods-LTBaiDuLocation_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9099D8D1A282C494F6602A88D323E344 /* Pods-LTBaiDuLocation_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LTBaiDuLocation_Example-dummy.m"; sourceTree = "<group>"; };
+		0095B844747656DC956BABF5FE678337 /* LTBaiDuLocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTBaiDuLocation.m; path = LTBaiDuLocation/Classes/LTBaiDuLocation.m; sourceTree = "<group>"; };
+		02996DAE34B78CA992D943BC92D82810 /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = GTMBase64/GTMDefines.h; sourceTree = "<group>"; };
+		060672805CB017CA758BEAD7E7D320DC /* BMKLocationAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BMKLocationAuth.h; sourceTree = "<group>"; };
+		08FB5E36538DFE4936CE903A20233165 /* Pods-LTBaiDuLocation_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTBaiDuLocation_Example-frameworks.sh"; sourceTree = "<group>"; };
+		0A40B77655D01D93F30FF65CB677D73E /* BMKLocationReGeocode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BMKLocationReGeocode.h; sourceTree = "<group>"; };
+		0A53BA1D47D321B10C8C99DE812209FE /* readme.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = readme.txt; sourceTree = "<group>"; };
+		0FD35AB63F11FBAEFF451ABD33F5A0A9 /* LTLocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTLocation.m; path = LTLocation/Classes/LTLocation.m; sourceTree = "<group>"; };
+		10168799401850D9D34AA6C904F4E5A0 /* LTLocation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTLocation-prefix.pch"; sourceTree = "<group>"; };
+		10A205A83829CB30F2AB688D62A9B7A0 /* libGTMBase64.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGTMBase64.a; path = libGTMBase64.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		11810E788F38B5A05EE888DB598E7525 /* GTMBase64-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMBase64-prefix.pch"; sourceTree = "<group>"; };
+		125981FFF568DC08CAA862BA5FF9CDC6 /* Pods-LTBaiDuLocation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTBaiDuLocation_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		184D5174BB48E75F0D5EB2211450CAE3 /* BMKLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BMKLocationManager.h; sourceTree = "<group>"; };
+		1ECFFD4A29C169E77BDDFB759A23EEA7 /* BMKLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BMKLocation.h; sourceTree = "<group>"; };
+		23DB3B9426036BEB057131BDCD86FECC /* GTMBase64.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMBase64.xcconfig; sourceTree = "<group>"; };
+		2C966C540B7CA8607B1165CC340948FC /* LTLocation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LTLocation-dummy.m"; sourceTree = "<group>"; };
+		2E63B47EB289FE5569C02B8E3E6411DB /* BMKGeoFenceRegion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BMKGeoFenceRegion.h; sourceTree = "<group>"; };
+		33B8CCA51CF507CF3629B83B6005144F /* GTMBase64-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMBase64-dummy.m"; sourceTree = "<group>"; };
+		45F74D2E06991BD7E70C590EFD92C0FE /* BMKLocationPoi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BMKLocationPoi.h; sourceTree = "<group>"; };
+		4A0EE6B6EEE7DCE95A75C07AD08D6E2B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		505EDDC97369F641F7EB23D184407794 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5565ACFA61A35DAC11CA7392250113D7 /* LTBaiDuLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTBaiDuLocation.h; path = LTBaiDuLocation/Classes/LTBaiDuLocation.h; sourceTree = "<group>"; };
+		5778D8E2E746206901F185E5163E3029 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		62F65E858983219E10C89C053007447C /* LTBaiDuLocation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = LTBaiDuLocation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		660E73DDCFE208B7894DD254B615F61E /* libLTLocation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLTLocation.a; path = libLTLocation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		719411384A3C1FE51DAA4D631ABD8B89 /* libPods-LTBaiDuLocation_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTBaiDuLocation_Example.a"; path = "libPods-LTBaiDuLocation_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		739CEC4A358A3695E42B301639E0EA13 /* LTBaiDuLocation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTBaiDuLocation-prefix.pch"; sourceTree = "<group>"; };
+		7D85B4082CD079CBD18CB5D90CCE505A /* Pods-LTBaiDuLocation_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTBaiDuLocation_Example-resources.sh"; sourceTree = "<group>"; };
+		86E1017805A7A4BC3C09AE0D5D220370 /* BMKLocationComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BMKLocationComponent.h; sourceTree = "<group>"; };
+		884DA54AE45F81DC427EF9CECF0A336A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		88C016D5EB0D098E767AD7ADE1AE1F5F /* GTMBase64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = GTMBase64/GTMBase64.h; sourceTree = "<group>"; };
+		8B373F387CABAE1AAF5388F26E83168F /* Pods-LTBaiDuLocation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LTBaiDuLocation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		8E20E7D6AFC6051A4B42B1998C3FC516 /* libLTBaiDuLocation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLTBaiDuLocation.a; path = libLTBaiDuLocation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		933B30185B925ACD71859E201376709A /* BMKLocationKit */ = {isa = PBXFileReference; includeInIndex = 1; path = BMKLocationKit; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CA61C5FE278D9DCA442ABC4805D6E107 /* Pods-LTBaiDuLocation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LTBaiDuLocation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		D8EE9E23110B7AB185FED4E13E48BEB8 /* Pods-LTBaiDuLocation_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LTBaiDuLocation_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9CF3540AB14A8377D05F798E6CA48C7D /* Pods-LTBaiDuLocation_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LTBaiDuLocation_Example-dummy.m"; sourceTree = "<group>"; };
+		A3A5E59AA921A3F00F01A5F87EA557F9 /* LTLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTLocation.h; path = LTLocation/Classes/LTLocation.h; sourceTree = "<group>"; };
+		A734F863841D4616F375BC74534E6A52 /* BMKGeoFenceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BMKGeoFenceManager.h; sourceTree = "<group>"; };
+		A73B4FECA1B74DC9FC5B8FC181EEA279 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BAF3F501A24EA1CEDC00DE541EE9E5EA /* LTLocation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LTLocation.xcconfig; sourceTree = "<group>"; };
+		BC56FE1CC702F31A84B9165E0028BF98 /* LTBaiDuLocation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LTBaiDuLocation.xcconfig; sourceTree = "<group>"; };
+		C6760F6403E6E6D182ECF99975E99A77 /* BMKLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BMKLocationKit.framework; path = LTBaiDuLocation/Classes/framework/BMKLocationKit.framework; sourceTree = "<group>"; };
+		CEB3F8E1ACB1D8A99146F786F4F4D7B7 /* Pods-LTBaiDuLocation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTBaiDuLocation_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D3130ECC3B056B20D83534C1DDBBCFD6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		D471347513CC850F284CDAE52D46F65A /* LTBaiDuLocation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LTBaiDuLocation-dummy.m"; sourceTree = "<group>"; };
+		D613D544AB815639F490748CF769E035 /* GTMBase64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMBase64.m; path = GTMBase64/GTMBase64.m; sourceTree = "<group>"; };
+		DD7F06310C0FD73E34CBE4EA09471D0A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		DEED227D65273AF64865955B80493B8F /* BMKLocationKitVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BMKLocationKitVersion.h; sourceTree = "<group>"; };
+		E7BB47F14123512CB58B59894E1335FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F521C3133E16824BCFF8C65F4DF31AE5 /* Pods-LTBaiDuLocation_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LTBaiDuLocation_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0EC3D7F5431798BF1A1FE32F4EF6CD1B /* Frameworks */ = {
+		8219266040D0045EA0B719A43935F4B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12DA2CE20994326F251D2D640EC6823C /* CoreLocation.framework in Frameworks */,
+				549FE0E7D368F2B46B793F568745D538 /* CoreTelephony.framework in Frameworks */,
+				B725C8611F1E03243809B43E8CA26250 /* Foundation.framework in Frameworks */,
+				CDD12CF9E59039FE735907E70C606776 /* Security.framework in Frameworks */,
+				7AF0C17347EB109884C9BF4E823276E4 /* SystemConfiguration.framework in Frameworks */,
+				E119FFDB34702431847483E4FBBB9325 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE957DC91409EE469E30768CF0B9B7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1926E23F6B050D83884E682AC8215CEF /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A52375E0A7C93A05B390D3D82A80A08E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECE3D5958194D622B2C281237E089CE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -31,56 +174,253 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+		0934FFDEBD7DE22BC967B9F9CE2E2116 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				E7883C781F5981A4B711FF71E92C287B /* BMKLocationKit.framework */,
+			);
+			name = framework;
+			path = LTBaiDuLocation/Classes/framework;
+			sourceTree = "<group>";
+		};
+		0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3F0DBE7BA9AFFF5F139AC177D574890 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2F5C0B9A143E473DA1767B66896561FF /* Products */ = {
+		1CDEA022CE751E705E08906E8C2D6234 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7B5A5C7028A4CE7D65B3F99644EC1412 /* libPods-LTBaiDuLocation_Example.a */,
+				E86F0C4C7567E0E0563633C72BC3B22E /* GTMBase64 */,
+				903B304DF764294EF261039E68EC0FD6 /* LTLocation */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		438A6FBCC998B5CFDACA07CF38EE5A37 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				A734F863841D4616F375BC74534E6A52 /* BMKGeoFenceManager.h */,
+				2E63B47EB289FE5569C02B8E3E6411DB /* BMKGeoFenceRegion.h */,
+				1ECFFD4A29C169E77BDDFB759A23EEA7 /* BMKLocation.h */,
+				060672805CB017CA758BEAD7E7D320DC /* BMKLocationAuth.h */,
+				86E1017805A7A4BC3C09AE0D5D220370 /* BMKLocationComponent.h */,
+				DEED227D65273AF64865955B80493B8F /* BMKLocationKitVersion.h */,
+				184D5174BB48E75F0D5EB2211450CAE3 /* BMKLocationManager.h */,
+				45F74D2E06991BD7E70C590EFD92C0FE /* BMKLocationPoi.h */,
+				0A40B77655D01D93F30FF65CB677D73E /* BMKLocationReGeocode.h */,
+			);
+			name = Headers;
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		4807B8EBFB9170481E0891C5D8A00604 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				DD7F06310C0FD73E34CBE4EA09471D0A /* LICENSE */,
+				62F65E858983219E10C89C053007447C /* LTBaiDuLocation.podspec */,
+				505EDDC97369F641F7EB23D184407794 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		5E096AB0A64E186FC5D0D85DB039E18B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6760F6403E6E6D182ECF99975E99A77 /* BMKLocationKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FD07CD25EB2E0958BBCB8EA0AB73D33 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC56FE1CC702F31A84B9165E0028BF98 /* LTBaiDuLocation.xcconfig */,
+				D471347513CC850F284CDAE52D46F65A /* LTBaiDuLocation-dummy.m */,
+				739CEC4A358A3695E42B301639E0EA13 /* LTBaiDuLocation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LTBaiDuLocation";
+			sourceTree = "<group>";
+		};
+		7D663055A429308FDA8952D11DEEDF5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10A205A83829CB30F2AB688D62A9B7A0 /* libGTMBase64.a */,
+				8E20E7D6AFC6051A4B42B1998C3FC516 /* libLTBaiDuLocation.a */,
+				660E73DDCFE208B7894DD254B615F61E /* libLTLocation.a */,
+				719411384A3C1FE51DAA4D631ABD8B89 /* libPods-LTBaiDuLocation_Example.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		471956DA0BC4319D5F90752F4E88879F /* Pods-LTBaiDuLocation_Example */ = {
-			isa = PBXGroup;
-			children = (
-				D8EE9E23110B7AB185FED4E13E48BEB8 /* Pods-LTBaiDuLocation_Example-acknowledgements.markdown */,
-				CA61C5FE278D9DCA442ABC4805D6E107 /* Pods-LTBaiDuLocation_Example-acknowledgements.plist */,
-				9099D8D1A282C494F6602A88D323E344 /* Pods-LTBaiDuLocation_Example-dummy.m */,
-				2CDD2925A5007BFF584E3F1B84524322 /* Pods-LTBaiDuLocation_Example.debug.xcconfig */,
-				08A32DEBC5038656F295181FADAFFBAB /* Pods-LTBaiDuLocation_Example.release.xcconfig */,
-			);
-			name = "Pods-LTBaiDuLocation_Example";
-			path = "Target Support Files/Pods-LTBaiDuLocation_Example";
-			sourceTree = "<group>";
-		};
-		5F1DED9EF612D3772E08505E64086F3D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				471956DA0BC4319D5F90752F4E88879F /* Pods-LTBaiDuLocation_Example */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				2F5C0B9A143E473DA1767B66896561FF /* Products */,
-				5F1DED9EF612D3772E08505E64086F3D /* Targets Support Files */,
+				C6E14CB7F253C9B7D6F97839AC247383 /* Development Pods */,
+				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
+				1CDEA022CE751E705E08906E8C2D6234 /* Pods */,
+				7D663055A429308FDA8952D11DEEDF5A /* Products */,
+				BD336D94CD071DAB91FCBB6A284CFB8D /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7ED82CD54ECD67074CB3C5CB06C4CCD5 /* LTBaiDuLocation */ = {
+			isa = PBXGroup;
+			children = (
+				5565ACFA61A35DAC11CA7392250113D7 /* LTBaiDuLocation.h */,
+				0095B844747656DC956BABF5FE678337 /* LTBaiDuLocation.m */,
+				0934FFDEBD7DE22BC967B9F9CE2E2116 /* framework */,
+				5E096AB0A64E186FC5D0D85DB039E18B /* Frameworks */,
+				4807B8EBFB9170481E0891C5D8A00604 /* Pod */,
+				6FD07CD25EB2E0958BBCB8EA0AB73D33 /* Support Files */,
+			);
+			name = LTBaiDuLocation;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		88A8EC2C7C548B2285A7B66DA6C2FF99 /* Pods-LTBaiDuLocation_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F521C3133E16824BCFF8C65F4DF31AE5 /* Pods-LTBaiDuLocation_Example-acknowledgements.markdown */,
+				8B373F387CABAE1AAF5388F26E83168F /* Pods-LTBaiDuLocation_Example-acknowledgements.plist */,
+				9CF3540AB14A8377D05F798E6CA48C7D /* Pods-LTBaiDuLocation_Example-dummy.m */,
+				08FB5E36538DFE4936CE903A20233165 /* Pods-LTBaiDuLocation_Example-frameworks.sh */,
+				7D85B4082CD079CBD18CB5D90CCE505A /* Pods-LTBaiDuLocation_Example-resources.sh */,
+				125981FFF568DC08CAA862BA5FF9CDC6 /* Pods-LTBaiDuLocation_Example.debug.xcconfig */,
+				CEB3F8E1ACB1D8A99146F786F4F4D7B7 /* Pods-LTBaiDuLocation_Example.release.xcconfig */,
+			);
+			name = "Pods-LTBaiDuLocation_Example";
+			path = "Target Support Files/Pods-LTBaiDuLocation_Example";
+			sourceTree = "<group>";
+		};
+		903B304DF764294EF261039E68EC0FD6 /* LTLocation */ = {
+			isa = PBXGroup;
+			children = (
+				A3A5E59AA921A3F00F01A5F87EA557F9 /* LTLocation.h */,
+				0FD35AB63F11FBAEFF451ABD33F5A0A9 /* LTLocation.m */,
+				AAED4B56A3167F4295AAE1C157741457 /* Support Files */,
+			);
+			name = LTLocation;
+			path = LTLocation;
+			sourceTree = "<group>";
+		};
+		AAED4B56A3167F4295AAE1C157741457 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAF3F501A24EA1CEDC00DE541EE9E5EA /* LTLocation.xcconfig */,
+				2C966C540B7CA8607B1165CC340948FC /* LTLocation-dummy.m */,
+				10168799401850D9D34AA6C904F4E5A0 /* LTLocation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LTLocation";
+			sourceTree = "<group>";
+		};
+		BD336D94CD071DAB91FCBB6A284CFB8D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88A8EC2C7C548B2285A7B66DA6C2FF99 /* Pods-LTBaiDuLocation_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C42D5BE5536038C6528C1F1ECE8F61C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				23DB3B9426036BEB057131BDCD86FECC /* GTMBase64.xcconfig */,
+				33B8CCA51CF507CF3629B83B6005144F /* GTMBase64-dummy.m */,
+				11810E788F38B5A05EE888DB598E7525 /* GTMBase64-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GTMBase64";
+			sourceTree = "<group>";
+		};
+		C6E14CB7F253C9B7D6F97839AC247383 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7ED82CD54ECD67074CB3C5CB06C4CCD5 /* LTBaiDuLocation */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E7883C781F5981A4B711FF71E92C287B /* BMKLocationKit.framework */ = {
+			isa = PBXGroup;
+			children = (
+				933B30185B925ACD71859E201376709A /* BMKLocationKit */,
+				0A53BA1D47D321B10C8C99DE812209FE /* readme.txt */,
+				438A6FBCC998B5CFDACA07CF38EE5A37 /* Headers */,
+			);
+			name = BMKLocationKit.framework;
+			path = BMKLocationKit.framework;
+			sourceTree = "<group>";
+		};
+		E86F0C4C7567E0E0563633C72BC3B22E /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				88C016D5EB0D098E767AD7ADE1AE1F5F /* GTMBase64.h */,
+				D613D544AB815639F490748CF769E035 /* GTMBase64.m */,
+				02996DAE34B78CA992D943BC92D82810 /* GTMDefines.h */,
+				C42D5BE5536038C6528C1F1ECE8F61C7 /* Support Files */,
+			);
+			name = GTMBase64;
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
+		F3F0DBE7BA9AFFF5F139AC177D574890 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D3130ECC3B056B20D83534C1DDBBCFD6 /* CoreLocation.framework */,
+				5778D8E2E746206901F185E5163E3029 /* CoreTelephony.framework */,
+				E7BB47F14123512CB58B59894E1335FB /* Foundation.framework */,
+				4A0EE6B6EEE7DCE95A75C07AD08D6E2B /* Security.framework */,
+				884DA54AE45F81DC427EF9CECF0A336A /* SystemConfiguration.framework */,
+				A73B4FECA1B74DC9FC5B8FC181EEA279 /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FF2E1151BAB9EF12C7788FF6D6CA8407 /* Headers */ = {
+		0909B7343A94A698460A07B6F08205C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D93F88B177B86D13FF5BA0C32F813B90 /* GTMBase64.h in Headers */,
+				886F95B2996CC4CCB3E19A952D77F5F6 /* GTMDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		411C9DAC05390681F9FB22710755AF87 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54BBB101EFB0FE7B66909015B7C20279 /* LTLocation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8C59E8C1E924ED427E410D5EAD2330 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F9276244BDD520DC10B4FEBE4B4FFA6 /* BMKGeoFenceManager.h in Headers */,
+				3C6AFD155A247D12A51C05A116568998 /* BMKGeoFenceRegion.h in Headers */,
+				DFF0E766A292BE0C5726EA61C93085A4 /* BMKLocation.h in Headers */,
+				84F6E352BC713C0A4D67B778A5B1EA44 /* BMKLocationAuth.h in Headers */,
+				9A0AB0285A744210EF8DD12C02358137 /* BMKLocationComponent.h in Headers */,
+				496EC1B5EE69FF87D81C0923CB894C1D /* BMKLocationKitVersion.h in Headers */,
+				8EC8D560E612736ED396900E52DDC83E /* BMKLocationManager.h in Headers */,
+				5CA775BF829FA508DA55ECB1F06B8494 /* BMKLocationPoi.h in Headers */,
+				0B7680EC558BD5955EF8388D61F53D99 /* BMKLocationReGeocode.h in Headers */,
+				9176635BA2E77AF22A37DF21B8A17AF4 /* LTBaiDuLocation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80CB95AE4DF5F46335750B4B862DCDC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,21 +430,78 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DA1457CFCF06A52810DAC31AA0009FED /* Pods-LTBaiDuLocation_Example */ = {
+		6A2366BD89270C542F14637823D15AB2 /* LTBaiDuLocation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BC116E58692A3E2C04B708824086DA8 /* Build configuration list for PBXNativeTarget "Pods-LTBaiDuLocation_Example" */;
+			buildConfigurationList = 49941BB0FBCAE2342B1B0A4BDF5E072C /* Build configuration list for PBXNativeTarget "LTBaiDuLocation" */;
 			buildPhases = (
-				FF2E1151BAB9EF12C7788FF6D6CA8407 /* Headers */,
-				FF6E1ADED803668B5D553CD70A22B9F0 /* Sources */,
-				0EC3D7F5431798BF1A1FE32F4EF6CD1B /* Frameworks */,
+				5F8C59E8C1E924ED427E410D5EAD2330 /* Headers */,
+				1A7BB32019A80F7FDEA58E40F60D8B5C /* Sources */,
+				8219266040D0045EA0B719A43935F4B7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE9C908944BE8A69A64FCF05AAFED303 /* PBXTargetDependency */,
+				CFCE04C918DA609365ABC449AB9627BA /* PBXTargetDependency */,
+			);
+			name = LTBaiDuLocation;
+			productName = LTBaiDuLocation;
+			productReference = 8E20E7D6AFC6051A4B42B1998C3FC516 /* libLTBaiDuLocation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6A6AAF94BCE733C1FFE246F972340CF5 /* LTLocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF76EB4F8FEB5B681F1BB7F463C7A1E /* Build configuration list for PBXNativeTarget "LTLocation" */;
+			buildPhases = (
+				411C9DAC05390681F9FB22710755AF87 /* Headers */,
+				E02094155A8EF45EC30DDC130C3A96ED /* Sources */,
+				9DE957DC91409EE469E30768CF0B9B7B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D23BC152121E0EDF600599173F49623 /* PBXTargetDependency */,
+			);
+			name = LTLocation;
+			productName = LTLocation;
+			productReference = 660E73DDCFE208B7894DD254B615F61E /* libLTLocation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9959F8561EDBAB390286092959F6F63E /* Pods-LTBaiDuLocation_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4496BEEC17E58881FCC53F054544B06A /* Build configuration list for PBXNativeTarget "Pods-LTBaiDuLocation_Example" */;
+			buildPhases = (
+				D80CB95AE4DF5F46335750B4B862DCDC /* Headers */,
+				B346905F545F45A8D5E1A09506407937 /* Sources */,
+				ECE3D5958194D622B2C281237E089CE1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82FB76D6D54D6545819D4650191680C6 /* PBXTargetDependency */,
+				9CAB9B7742AF7BC6EF1635D3F20BDA34 /* PBXTargetDependency */,
+				056109B9FC8008C9801D5ABD5EECF6E1 /* PBXTargetDependency */,
+			);
+			name = "Pods-LTBaiDuLocation_Example";
+			productName = "Pods-LTBaiDuLocation_Example";
+			productReference = 719411384A3C1FE51DAA4D631ABD8B89 /* libPods-LTBaiDuLocation_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D7F8FCEA1F08999DB3B19C1C7B718C65 /* GTMBase64 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18343AD23EB4AE74058792FBD52752E1 /* Build configuration list for PBXNativeTarget "GTMBase64" */;
+			buildPhases = (
+				0909B7343A94A698460A07B6F08205C4 /* Headers */,
+				FC220C1911D79698B0F1BDF72D1B8BFE /* Sources */,
+				A52375E0A7C93A05B390D3D82A80A08E /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-LTBaiDuLocation_Example";
-			productName = "Pods-LTBaiDuLocation_Example";
-			productReference = 7B5A5C7028A4CE7D65B3F99644EC1412 /* libPods-LTBaiDuLocation_Example.a */;
+			name = GTMBase64;
+			productName = GTMBase64;
+			productReference = 10A205A83829CB30F2AB688D62A9B7A0 /* libGTMBase64.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -124,28 +521,214 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 2F5C0B9A143E473DA1767B66896561FF /* Products */;
+			productRefGroup = 7D663055A429308FDA8952D11DEEDF5A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA1457CFCF06A52810DAC31AA0009FED /* Pods-LTBaiDuLocation_Example */,
+				D7F8FCEA1F08999DB3B19C1C7B718C65 /* GTMBase64 */,
+				6A2366BD89270C542F14637823D15AB2 /* LTBaiDuLocation */,
+				6A6AAF94BCE733C1FFE246F972340CF5 /* LTLocation */,
+				9959F8561EDBAB390286092959F6F63E /* Pods-LTBaiDuLocation_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FF6E1ADED803668B5D553CD70A22B9F0 /* Sources */ = {
+		1A7BB32019A80F7FDEA58E40F60D8B5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41F7FD46368021FD2A1F4792BA66F019 /* Pods-LTBaiDuLocation_Example-dummy.m in Sources */,
+				CF9EA2485A9430D0AA08CD5FA8305E62 /* BMKLocationKit in Sources */,
+				39C21F9C0C8CD28A099DD4403CFA3E75 /* LTBaiDuLocation-dummy.m in Sources */,
+				C2D2BD173A1DB057B151F05C90B941E3 /* LTBaiDuLocation.m in Sources */,
+				C22F4DC69186101DEE681D7719A58CEB /* readme.txt in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B346905F545F45A8D5E1A09506407937 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD1A7E14D7ABAC8A1206BE1FF6BA750A /* Pods-LTBaiDuLocation_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02094155A8EF45EC30DDC130C3A96ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02286A75C91CBAA58CEFEF483475A5E8 /* LTLocation-dummy.m in Sources */,
+				D488B9B0838F9E93CB5B3C6687D07BF9 /* LTLocation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC220C1911D79698B0F1BDF72D1B8BFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0B0BB888621F2EA9C4D1D928AA30580 /* GTMBase64-dummy.m in Sources */,
+				FC7EB161E718538B413C7E1ED26ED798 /* GTMBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		056109B9FC8008C9801D5ABD5EECF6E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LTLocation;
+			target = 6A6AAF94BCE733C1FFE246F972340CF5 /* LTLocation */;
+			targetProxy = 6E701D82F71C39BBA02998222A30410F /* PBXContainerItemProxy */;
+		};
+		82FB76D6D54D6545819D4650191680C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMBase64;
+			target = D7F8FCEA1F08999DB3B19C1C7B718C65 /* GTMBase64 */;
+			targetProxy = 7E77FF03D0C27FCC5A3E687FA246D45E /* PBXContainerItemProxy */;
+		};
+		8D23BC152121E0EDF600599173F49623 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMBase64;
+			target = D7F8FCEA1F08999DB3B19C1C7B718C65 /* GTMBase64 */;
+			targetProxy = 59503D722EF38076F72F3CB18CC93467 /* PBXContainerItemProxy */;
+		};
+		9CAB9B7742AF7BC6EF1635D3F20BDA34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LTBaiDuLocation;
+			target = 6A2366BD89270C542F14637823D15AB2 /* LTBaiDuLocation */;
+			targetProxy = 61FD4714DE33074EBB94A3BB48E1F7B0 /* PBXContainerItemProxy */;
+		};
+		CFCE04C918DA609365ABC449AB9627BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LTLocation;
+			target = 6A6AAF94BCE733C1FFE246F972340CF5 /* LTLocation */;
+			targetProxy = CEAF96266FA2E06D6E11820459A30CE7 /* PBXContainerItemProxy */;
+		};
+		FE9C908944BE8A69A64FCF05AAFED303 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMBase64;
+			target = D7F8FCEA1F08999DB3B19C1C7B718C65 /* GTMBase64 */;
+			targetProxy = 01877DCEF0DD3A3614CCAB57D354E9B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		96434B6C8FF320C976A10DAD7174A4BB /* Release */ = {
+		1E40E790525D513121A9D6846326B9F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC56FE1CC702F31A84B9165E0028BF98 /* LTBaiDuLocation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/LTBaiDuLocation/LTBaiDuLocation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = LTBaiDuLocation;
+				PRODUCT_NAME = LTBaiDuLocation;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23340EA818D782CAFC181D9E60141C97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC56FE1CC702F31A84B9165E0028BF98 /* LTBaiDuLocation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/LTBaiDuLocation/LTBaiDuLocation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = LTBaiDuLocation;
+				PRODUCT_NAME = LTBaiDuLocation;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2FE7058EA835092C9B9DA54EBEC9B5C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23DB3B9426036BEB057131BDCD86FECC /* GTMBase64.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GTMBase64/GTMBase64-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GTMBase64;
+				PRODUCT_NAME = GTMBase64;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47AAF88BFC27954A934DD12138FD6B22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23DB3B9426036BEB057131BDCD86FECC /* GTMBase64.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GTMBase64/GTMBase64-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GTMBase64;
+				PRODUCT_NAME = GTMBase64;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71448DAFC3287CCC5024EB16146C904E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 125981FFF568DC08CAA862BA5FF9CDC6 /* Pods-LTBaiDuLocation_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85B95B1234E227C814CCC2C7902D0916 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -200,11 +783,38 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		D11C82AF2204B41B80412B8DC9C1D652 /* Debug */ = {
+		9D4EE0DCE6A3B8564CB424F54CEBD357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAF3F501A24EA1CEDC00DE541EE9E5EA /* LTLocation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/LTLocation/LTLocation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = LTLocation;
+				PRODUCT_NAME = LTLocation;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A73625DEBD810B78234FA1958C191C8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,34 +874,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		D75A94742A87BA2350C84AB8D566A701 /* Debug */ = {
+		CA9171C38A4E44528060E9AD69E9B918 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CDD2925A5007BFF584E3F1B84524322 /* Pods-LTBaiDuLocation_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FC3ADE3E71BF841848EE94C200A4C204 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08A32DEBC5038656F295181FADAFFBAB /* Pods-LTBaiDuLocation_Example.release.xcconfig */;
+			baseConfigurationReference = CEB3F8E1ACB1D8A99146F786F4F4D7B7 /* Pods-LTBaiDuLocation_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -311,14 +902,37 @@
 			};
 			name = Release;
 		};
+		F613D1C7E73DA803DF0152A4BEF137B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAF3F501A24EA1CEDC00DE541EE9E5EA /* LTLocation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/LTLocation/LTLocation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = LTLocation;
+				PRODUCT_NAME = LTLocation;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BC116E58692A3E2C04B708824086DA8 /* Build configuration list for PBXNativeTarget "Pods-LTBaiDuLocation_Example" */ = {
+		18343AD23EB4AE74058792FBD52752E1 /* Build configuration list for PBXNativeTarget "GTMBase64" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D75A94742A87BA2350C84AB8D566A701 /* Debug */,
-				FC3ADE3E71BF841848EE94C200A4C204 /* Release */,
+				2FE7058EA835092C9B9DA54EBEC9B5C1 /* Debug */,
+				47AAF88BFC27954A934DD12138FD6B22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -326,8 +940,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D11C82AF2204B41B80412B8DC9C1D652 /* Debug */,
-				96434B6C8FF320C976A10DAD7174A4BB /* Release */,
+				A73625DEBD810B78234FA1958C191C8C /* Debug */,
+				85B95B1234E227C814CCC2C7902D0916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4496BEEC17E58881FCC53F054544B06A /* Build configuration list for PBXNativeTarget "Pods-LTBaiDuLocation_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71448DAFC3287CCC5024EB16146C904E /* Debug */,
+				CA9171C38A4E44528060E9AD69E9B918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49941BB0FBCAE2342B1B0A4BDF5E072C /* Build configuration list for PBXNativeTarget "LTBaiDuLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23340EA818D782CAFC181D9E60141C97 /* Debug */,
+				1E40E790525D513121A9D6846326B9F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF76EB4F8FEB5B681F1BB7F463C7A1E /* Build configuration list for PBXNativeTarget "LTLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F613D1C7E73DA803DF0152A4BEF137B0 /* Debug */,
+				9D4EE0DCE6A3B8564CB424F54CEBD357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

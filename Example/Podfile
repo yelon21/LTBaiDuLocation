@@ -1,8 +1,8 @@
 platform :ios, '8.0'
 target 'LTBaiDuLocation_Example' do
     
-#  pod 'LTLocation', :git => 'https://github.com/yelon21/LTLocation.git'
+  pod 'LTLocation', :git => 'https://github.com/yelon21/LTLocation.git'
 #
-#  pod 'LTBaiDuLocation', :path => '../'
+  pod 'LTBaiDuLocation', :path => '../'
 
 end

@@ -31,14 +31,16 @@ TODO: LTBaiDuLocation 百度定位
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'LTBaiDuLocation/Classes/**/*'
+  s.vendored_frameworks = 'LTBaiDuLocation/Classes/framework/*.framework'
   
+  s.libraries = 'stdc++', 'sqlite3.0'
   # s.resource_bundles = {
   #   'LTBaiDuLocation' => ['LTBaiDuLocation/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'CoreLocation', 'Foundation', 'UIKit', 'SystemConfiguration', 'Security', 'CoreTelephony'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'BMKLocationKit'
+  #s.dependency 'BMKLocationKit'
   s.dependency 'LTLocation'
 end

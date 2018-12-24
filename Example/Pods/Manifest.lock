@@ -1,3 +1,34 @@
-PODFILE CHECKSUM: 9eae53e750496ab948304a5c9c7c5a2f84a38fd0
+PODS:
+  - GTMBase64 (1.0.1)
+  - LTBaiDuLocation (0.1.3):
+    - LTLocation
+  - LTLocation (0.1.1):
+    - GTMBase64 (~> 1.0.0)
 
-COCOAPODS: 1.6.0.beta.1
+DEPENDENCIES:
+  - LTBaiDuLocation (from `../`)
+  - LTLocation (from `https://github.com/yelon21/LTLocation.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GTMBase64
+
+EXTERNAL SOURCES:
+  LTBaiDuLocation:
+    :path: "../"
+  LTLocation:
+    :git: https://github.com/yelon21/LTLocation.git
+
+CHECKOUT OPTIONS:
+  LTLocation:
+    :commit: 16fbf4d0ae831fab42845c2089d405a375971c62
+    :git: https://github.com/yelon21/LTLocation.git
+
+SPEC CHECKSUMS:
+  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
+  LTBaiDuLocation: 0e4195174fef6ca84b6456dcf6b358632627e843
+  LTLocation: 937587aeb401978f5e001d3475262156fe580a90
+
+PODFILE CHECKSUM: 115f295b31db37ba5330ab52855727b57cfe9b57
+
+COCOAPODS: 1.5.3

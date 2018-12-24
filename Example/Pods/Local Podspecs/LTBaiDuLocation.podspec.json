@@ -19,10 +19,20 @@
     "ios": "8.0"
   },
   "source_files": "LTBaiDuLocation/Classes/**/*",
+  "vendored_frameworks": "LTBaiDuLocation/Classes/framework/*.framework",
+  "libraries": [
+    "stdc++",
+    "sqlite3.0"
+  ],
+  "frameworks": [
+    "CoreLocation",
+    "Foundation",
+    "UIKit",
+    "SystemConfiguration",
+    "Security",
+    "CoreTelephony"
+  ],
   "dependencies": {
-    "BMKLocationKit": [
-
-    ],
     "LTLocation": [
 
     ]
