@@ -153,7 +153,7 @@
     if (self.permissionBD) {
         
         BMKLocationReGeocode * rgcData = self.currentLocation.rgcData;
-        return [NSString stringWithFormat:@"%@%@%@%@%@(%@)",rgcData.province,rgcData.city,rgcData.district,rgcData.street,rgcData.streetNumber,rgcData.locationDescribe];
+        return [[NSString stringWithFormat:@"%@%@%@%@%@(%@)",rgcData.province,rgcData.city,rgcData.district,rgcData.street,rgcData.streetNumber,rgcData.locationDescribe] stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
     }
     else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
         
@@ -167,7 +167,7 @@
         
         BMKLocationReGeocode * rgcData = self.currentLocation.rgcData;
         
-        return [NSString stringWithFormat:@"%@|%@|%@|",rgcData.province,rgcData.city,rgcData.district];
+        return [[NSString stringWithFormat:@"%@|%@|%@|",rgcData.province,rgcData.city,rgcData.district] stringByReplacingOccurrencesOfString:@"(null)" withString:@""];
     }
     else if (ltlocation && [ltlocation isKindOfClass:[LTLocation class]]) {
         
