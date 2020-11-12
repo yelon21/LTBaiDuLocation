@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [[LTBaiDuLocation sharedLocation] lt_startWithBaiDuKey:@"LSSAleue3D19nSSp4KwAic3z"];
+//    [[LTBaiDuLocation sharedLocation] lt_startWithBaiDuKey:@"LSSAleue3D19nSSp4KwAic3z"];
     return YES;
 }
 

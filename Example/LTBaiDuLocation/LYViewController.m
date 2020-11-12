@@ -37,7 +37,7 @@
 }
 
 - (IBAction)startLocation:(id)sender {
-    
+//    [LTBaiDuLocation sharedLocation];
     [[LTBaiDuLocation sharedLocation]lt_startLocation];
 }
 
