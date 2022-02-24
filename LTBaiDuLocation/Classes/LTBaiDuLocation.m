@@ -21,6 +21,8 @@
 
 @property(nonatomic,strong) BMKLocationManager *locationManager;
 
+@property(nonatomic,strong) NSString *bdKey;
+
 @property(nonatomic,strong,readwrite) BMKLocation *currentLocation;
 
 @property(nonatomic,assign,readwrite) NSString *detailAddress;//详细地址
@@ -92,11 +94,18 @@
     return self;
 }
 
-- (void)lt_startWithBaiDuKey:(NSString *)key{
++ (void)lt_setBaiDuKey:(NSString *)key{
+    
+    [[self sharedLocation] setBdKey:key];
+}
 
+- (void)lt_startWithBaiDuKey{
+
+    NSString *key = self.bdKey;
+    
     if (!key || ![key isKindOfClass:[NSString class]]||[key length]==0) {
         
-        NSLog(@"百度定位Key异常：%@",key);
+        NSLog(@"请先设置百度定位key：%@",key);
         return;
     }
     

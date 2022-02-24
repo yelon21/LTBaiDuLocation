@@ -30,7 +30,8 @@
 
 + (id)sharedLocation;
 
-- (void)lt_startWithBaiDuKey:(NSString *)key;
++ (void)lt_setBaiDuKey:(NSString *)key;
+- (void)lt_startWithBaiDuKey;
 //开始定位
 -(void)lt_startLocation;
 //停止定位
